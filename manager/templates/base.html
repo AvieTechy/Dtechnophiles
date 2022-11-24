@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load static %}
+    <link rel="icon" type="image/png" sizes="25x25" href="{% static 'images/logo.png' %}">
+
+    <title>DT - Dedicated technophiles</title>
+
+    <!-- CSS FILES -->
+    {% block css %}
+    {% endblock css %}
+
+    <!--
+
+TemplateMo 581 Kind Heart Charity
+
+https://templatemo.com/tm-581-kind-heart-charity
+
+-->
+
+</head>
+
+<body id="section_1">
+    {% include 'snippets/header.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'snippets/footer.html' %}
+    <!-- JAVASCRIPT FILES -->
+    {% block js %}
+    {% endblock js %}
+</body>
+
+</html>

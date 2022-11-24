@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+ <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+<main>
+    <section class="section-padding section-bg">
+        <div class="container">
+            <div class="row">
+                  <div class="col-lg-12 col-12 text-center mb-4">
+                    <h2>Project Plan</h2>
+                </div>
+                        <iframe src="{% static 'doc/projectPlan.pdf' %}" width="100%" height="650px"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+{% endblock content %}
+    {% block js %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/counter.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    {% endblock js %}

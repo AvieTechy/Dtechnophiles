@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+ <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+<main>
+     <section class="section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-10 col-12 text-center mx-auto">
+                    <h2 class="mb-5">Nhật Ký</h2>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="/nhi" class="d-block">
+                            <img src="{% static 'images/nhi.jpg' %}" class="featured-block-image img-fluid" alt="">
+                            <p class="featured-block-text">Cao Uyển Nhi <br> <strong>Leader</strong></p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="/loc" class="d-block">
+                            <img src="{% static 'images/loc.jpg' %}" class="featured-block-image img-fluid" alt="">
+                            <p class="featured-block-text"> Nguyễn Tấn Lộc <br> <strong>Game Maker & Event</strong></p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="/khoa" class="d-block">
+                            <img src="{% static 'images/khoa.jpg' %}" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Đặng Trần Anh Khoa <br> <strong>Game Maker & Report Creator</strong></p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="/minh" class="d-block">
+                            <img src="{% static 'images/minh.jpg' %}" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text"> Nguyễn Tuấn Minh <br> <strong>Designer & Infomation Manager</strong></p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="/huyen" class="d-block">
+                            <img src="{% static 'images/huyen.jpg' %}" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Thái Thị Kim Huyền <br><strong>Secretary & Designer</strong></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}
+    {% block js %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/counter.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    {% endblock js %}
