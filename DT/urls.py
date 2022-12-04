@@ -5,7 +5,8 @@ from django.urls import path
 from django.conf.urls import include
 
 from manager.views import (
-    index, contract, worksheet, report, diary, project, plan, week1, week2, nhi, khoa, huyen, minh, loc, diary
+    index, contract, worksheet, report, diary, project1, project2,
+     plan, week1, week2, nhi, khoa, huyen, minh, loc, diary
 )
 
 urlpatterns = [
@@ -14,7 +15,8 @@ urlpatterns = [
     path('worksheet/', worksheet, name="worksheet"),
     path('report/', report, name="report"),
     path('diary/', diary, name="diary"),
-    path('project/', project, name="project"),
+    path('project1/', project1, name="project1"),
+    path('project2/', project2, name="project2"),
     path('plan/', plan, name="plan"),
     path('week1/', week1, name="week1"),
     path('week2/', week2, name="week2"),

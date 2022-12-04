@@ -4,8 +4,11 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def project(request):
+def project1(request):
     return render(request, 'project.html')
+
+def project2(request):
+    return render(request, 'project2.html')
 
 def diary(request):
     return render(request, 'diary.html')
@@ -28,8 +31,6 @@ def week1(request):
 def week2(request):
     return render(request, 'week2.html')
 
-def diary(request):
-    return render(request, 'diary.html')
 
 def nhi(request):
     return render(request, 'nhi.html')
