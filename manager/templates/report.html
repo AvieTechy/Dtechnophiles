@@ -3,130 +3,138 @@
 {% load static %}
 
 {% block css %}
- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+ <style>
 
-    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
-
-    <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
-<style>
-    :root {
-  --surface-color: #fff;
-  --curve: 40;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #fef8f8;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 4rem 5vw;
-  padding: 0;
-  list-style-type: none;
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
 }
 
 .card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
   position: relative;
-  display: block;
-  height: 100%;
-  border-radius: calc(var(--curve) * 1px);
-  overflow: hidden;
-  text-decoration: none;
+  left: 0px;
 }
 
-.card__image {
-  width: 100%;
-  height: auto;
+.card:not(:first-child) {
+    margin-left: -50px;
 }
 
-.card__overlay {
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  border-radius: calc(var(--curve) * 1px);
-  background-color: var(--surface-color);
-  transform: translateY(100%);
-  transition: .2s ease-in-out;
+  left: 20px;
+  top: 15px;
 }
 
-.card:hover .card__overlay {
-  transform: translateY(0);
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
 }
 
-.card__header {
-  position: relative;
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+</style>
+<style>
+	.wrap {
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 2em;
-  padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;
-  background-color: var(--surface-color);
-  transform: translateY(-100%);
-  transition: .2s ease-in-out;
+  justify-content: center;
 }
 
-.card__arc {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-  z-index: 1;
-}
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
 
-.card__arc path {
-  fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}
-
-.card:hover .card__header {
-  transform: translateY(0);
-}
-
-.card__thumb {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.card__title {
-  font-size: 1em;
-  margin: 0 0 .3em;
-  color: #6A515E;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: "MockFlowFont";
-  font-size: .8em;
-  color: #D7BDCA;
-}
-
-.card__status {
-  font-size: .8em;
-  color: #D7BDCA;
-}
-
-.card__description {
-  padding: 0 2em 2em;
-  margin: 0;
-  color: #D7BDCA;
-  font-family: "MockFlowFont";
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+.button:hover {
+  background-color: #262B2D !important;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 </style>
 {% endblock css %}
@@ -137,49 +145,76 @@ body {
         <div class="container">
             <div class="row">
                   <div class="col-lg-12 col-12 text-center">
-                    <h2>Biên Bản Cuộc Họp</h2>
-                       <ul class="cards">
-                          <li>
-                            <a href="/week1" class="card">
-                              <img src="{% static 'doc/w1.png' %}" class="card__image" alt="" />
-                              <div class="card__overlay">
-                                <div class="card__header">
-                                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                                  <img class="card__thumb" src="{% static 'images/logo.png' %}" alt="" />
-                                  <div class="card__header-text">
-                                    <h3 class="card__title">Biên Bản Họp Tuần 4 (Lần 1)</h3>
-                                    <span class="card__status">9.11.2022</span>
-                                  </div>
-                                </div>
-                                <p class="card__description">Phân chia công việc <br>
-Lập kế hoạch <br>
-Chọn được công cụ làm game. <br>
-Giới thiệu quy trình scrum.
-</p>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="/week2" class="card">
-                              <img src="{% static 'doc/w2.png' %}" class="card__image" alt="" />
-                              <div class="card__overlay">
-                                <div class="card__header">
-                                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                                  <img class="card__thumb" src="{% static 'images/logo.png' %}" alt="" />
-                                  <div class="card__header-text">
-                                    <h3 class="card__title">Biên bản Nhóm Tuần 5 (Lần 2)</h3>
-                                    <span class="card__status">16.11.2022</span>
-                                  </div>
-                                </div>
-                                <p class="card__description">Đánh giá các công việc mà từng ban đã làm trong tuần 4. <br>
-Phân công công việc cho từng ban.<br>
-Nêu lên được những lưu ý chung dành cho các thành viên. <br>
-</p>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
-                </div>
+                     <h2 style="padding: 30px 10px 20px 10px; font-family:Candara,arial,helvetica;">Biên bản các cuộc họp</h2>
+                  </div>
+                 <div class="col-lg-12 col-12 text-center">
+                       <div class="container">
+
+    <div class="card">
+      <h3 class="title" >Biên Bản 1</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="/week1">
+		  <button class="button">More Info</button>
+		  </a>
+	  	</div>
+
+    </div>
+    <div class="card">
+      <h3 class="title">Biên Bản 2</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="/week2">
+		  <button class="button">More Info</button>
+			  </a>
+      </div>
+    </div>
+ <div class="card">
+      <h3 class="title">Biên Bản 3</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="/week3">
+		  <button class="button">More Info</button>
+			  </a>
+      </div>
+    </div>
+ <div class="card">
+      <h3 class="title">Biên Bản 4</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="/week4">
+		  <button class="button">More Info</button>
+			  </a>
+      </div>
+    </div>
+
+
+
+  </div>
 
             </div>
             </div>
@@ -189,11 +224,21 @@ Nêu lên được những lưu ý chung dành cho các thành viên. <br>
 
 </main>
 {% endblock content %}
-    {% block js %}
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.sticky.js' %}"></script>
-    <script src="{% static 'js/click-scroll.js' %}"></script>
-    <script src="{% static 'js/counter.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
+{% block js %}
+   <script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery-migrate.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.form.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.mobile.custom.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/modernizr.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/response.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/swiper.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/waypoints.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.stellar.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/module.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/bootstrap.min.js" %}'></script>
+		<script src="{% static 'js/wow.min.js"></script>
+
+		<script>
+		new WOW().init();
+		</script>
     {% endblock js %}

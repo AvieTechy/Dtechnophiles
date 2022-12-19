@@ -3,325 +3,196 @@
 {% load static %}
 
 {% block css %}
- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<style>
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
 
-    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
 
-    <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+</style>
+<style>
+	.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #262B2D !important;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+</style>
 {% endblock css %}
 
 {% block content %}
 <main>
-    <section class="section-padding section-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-12 text-center">
-                    <h2>Đồ Án Số 1 - Remake Game</h2>
-                </div>
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{% static 'images/theme1.gif' %}" style="width: fit-content; block-size: fit-content;" class="custom-text-box-image img-fluid" alt="">
-                </div>
+ <div class="container">
 
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box">
-                        <h5 class="mb-3">SLEEPY GURL <small>(dựa trên <a href="https://flappybird.io/" target="_blank">Flappy Bird</a>)</small></h5>
-                        <p class="mb-0">Anna (Nhân vật chính) là một cô gái ham ngủ hơn ham học. Đáng buồn thay, thời gian không chờ đợi một ai và bây giờ cô ấy sẽ phải gánh lấy hậu quả. Bạn hãy giúp Anna! Hãy điều khiển một cách khéo léo, để Anna có thể hoàn thành những deadline mà lẽ ra cô bạn nên hoàn thành sớm hơn. Tuy nhiên, vì Anna vẫn chưa hết buồn ngủ, đừng để cô ấy ngủ gục giữa chừng nhé!</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3">Hướng Dẫn</h5>
-                        <p class="mb-0">Sleepy Gurl là một game đơn giản. Người chơi sẽ điều khiển nhân vật được chọn để nhảy qua các cột deadline bằng cách nhấn Spacebar ( hoặc chuột trái). Hãy nhớ tận dụng các vật phẩm hỗ trợ và tránh né những chướng ngại vật một cách chính xác nhất để có thể đạt được số điểm cao nhất.
-</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box mb-lg-0 text-center">
-                                <h5 class="mb-3">Logo Game</h5>
-                                <p></p>
-                                <img src="{% static 'images/logoGame.png' %}" height="110px;" width="110px;">
-                                <br>
-                                <small>Design By: DT Design Team</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
-                                <div class="counter-thumb">
-                                    <div class="d-flex">
-                                        <span class="counter-number" data-from="1" data-to="100"
-                                            data-speed="1000"></span>
-                                        <span class="counter-number-text">%</span>
-                                    </div>
+    <div class="card">
+      <h3 class="title" >Project 1 - Sleepy Gurl</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="#">
+		  <button class="button">More Info</button>
+		  </a>
+	  	</div>
 
-                                    <span class="counter-text">Hoàn Thành</span>
-                                </div>
-                                <br>
-                                  <ul class="custom-list mt-2">
-                                      <li class="custom-list-item d-flex">
-                                        <i class="bi-fingerprint custom-text-box-icon me-2"></i>
-                                        <a href="https://drive.google.com/file/d/1_87uzvCJniuBUhFXlK047XCSdwaDe_UQ/view?usp=sharing" class="site-footer-link1" target="_blank">Trailer</a>
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-fingerprint custom-text-box-icon me-2"></i>
-                                        <a href="https://drive.google.com/drive/folders/1PklowMevyKmrdF6s1UcZJ8u-Ux_-z5mx?usp=share_link" class="site-footer-link1" target="_blank">Download</a>
-                                    </li>
-                                      <li class="custom-list-item d-flex">
-                                        <i class="bi-fingerprint custom-text-box-icon me-2"></i>
-                                        <a href="https://docs.google.com/document/d/1PmdJajh9WAXb6j9Iicm8z_oxGzfCUjkm/edit?usp=sharing&ouid=110999284933307701948&rtpof=true&sd=true" class="site-footer-link1" target="_blank">Documentation</a>
-                                    </li>
-                                       <li class="custom-list-item d-flex">
-                                        <i class="bi-fingerprint custom-text-box-icon me-2"></i>
-                                        <a href="https://sleepygurl.pythonanywhere.com/" class="site-footer-link1" target="_blank">Website Game</a>
-                                    </li>
-                                  </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-padding section-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Giao Diện</h2>
-                </div>
-               <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/theme2.gif' %}" class="featured-block-image img-fluid" alt="">
+    </div>
+    <div class="card">
+      <h3 class="title">Project 2 - Video Demo OCR</h3>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+      </svg>
+		  <a href="/project2">
+		  <button class="button">More Info</button>
+			  </a>
+      </div>
+    </div>
 
-                            <p style="font-size: 20px;" class="featured-block-text">Giao Diện Chính</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/game.png' %}" class="featured-block-image img-fluid" alt="">
 
-                            <p style="font-size: 20px;" class="featured-block-text">Giao Diện Game</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/intro.png' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Giới Thiệu</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/guide.png' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Hướng Dẫn</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/vatpham.png' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Hàng Chướng Vật Phẩm</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/chuongngai.png' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Hàng Chướng Ngại Vật</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/pick.gif' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Giao Diện Chọn Nhân Vật</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/end.png' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p style="font-size: 20px;" class="featured-block-text">Giao Diện Kết Thúc Game</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-padding" id="section_3">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12 text-center mb-4">
-                    <h2>Kế Hoạch</h2>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block-wrap">
-                        <img src="{% static 'images/logo.png' %}"
-                            class="custom-block-image img-fluid" alt="">
-
-                        <div class="custom-block">
-                            <div class="custom-block-body">
-                                <h5 class="mb-3">Tuần 5</h5>
-
-                                <ul class="custom-list mt-2">
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Thiết Kế Giao Diện Chính, Nhân Vật, Xây Dựng Cốt Chuyện
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Xây Dựng Nền Tảng Cơ Bản Cho Game
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Xây Dựng Khung Website Giới Thiệu
-                                    </li>
-
-                                </ul>
-
-                                <div class="progress mt-4">
-                                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="100"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex align-items-center my-2">
-                                    <p class="mb-0">
-                                        <strong>Hoàn Thành:</strong>
-                                        100%
-                                    </p>
-
-                                    <p class="ms-auto mb-0">
-                                        <strong>Deadline:</strong>
-                                        10.00PM, 16.11.2022
-                                    </p>
-                                </div>
-                            </div>
-
-                            <a href="" class="custom-btn btn"> Finished</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block-wrap">
-                        <img src="{% static 'images/logo.png' %}"
-                            class="custom-block-image img-fluid" alt="">
-
-                        <div class="custom-block">
-                            <div class="custom-block-body">
-                                <h5 class="mb-3">Tuần 6</h5>
-
-                                <ul class="custom-list mt-2">
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Nâng Cấp Game, Hoàn Thiện Thông Tin (Luật, Mô Tả, Giới Thiệu)
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Liên Hệ Duyệt Game và Đăng Game với Chợ
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Hoàn Thiện Website
-                                    </li>
-
-                                </ul>
-
-                                <div class="progress mt-4">
-                                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="100"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex align-items-center my-2">
-                                    <p class="mb-0">
-                                        <strong>Hoàn Thành:</strong>
-                                        100%
-                                    </p>
-
-                                    <p class="ms-auto mb-0">
-                                        <strong>Deadline:</strong>
-                                        10.00PM, 23.11.2022
-                                    </p>
-                                </div>
-                            </div>
-
-                            <a href="" class="custom-btn btn">In Progress</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="custom-block-wrap">
-                        <img src="{% static 'images/logo.png' %}"
-                            class="custom-block-image img-fluid" alt="">
-
-                        <div class="custom-block">
-                            <div class="custom-block-body">
-                                <h5 class="mb-3">Tuần 7</h5>
-
-                                <ul class="custom-list mt-2">
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Trình Bày Đồ Án
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Báo Cáo Quá Trình Làm Việc
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Nhận Góp Ý
-                                    </li>
-                                </ul>
-
-                                <div class="progress mt-4">
-                                    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0"
-                                        aria-valuemin="0" aria-valuemax="0"></div>
-                                </div>
-
-                                <div class="d-flex align-items-center my-2">
-                                    <p class="mb-0">
-                                        <strong>Hoàn Thành:</strong>
-                                        ---
-                                    </p>
-
-                                    <p class="ms-auto mb-0">
-                                        <strong>Date:</strong>
-                                        ---
-                                    </p>
-                                </div>
-                            </div>
-
-                            <a href="/" class="custom-btn btn">Not Started</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-</main>
+  </div>
+	</main>
 {% endblock content %}
     {% block js %}
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.sticky.js' %}"></script>
-    <script src="{% static 'js/click-scroll.js' %}"></script>
-    <script src="{% static 'js/counter.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
+   <script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery-migrate.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.form.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.mobile.custom.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/modernizr.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/response.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/swiper.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/waypoints.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.stellar.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/module.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/bootstrap.min.js" %}'></script>
+		<script src="{% static 'js/wow.min.js"></script>
+
+		<script>
+		new WOW().init();
+		</script>
     {% endblock js %}

@@ -1,42 +1,39 @@
-
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-    <meta charset="utf-8">
+	<meta charset="UTF-8" />
+	<meta name="description" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="author" content="">
     {% load static %}
-    <link rel="icon" type="image/png" sizes="25x25" href="{% static 'images/logo.png' %}">
-
-    <title>DT - Dedicated technophiles</title>
-
-    <!-- CSS FILES -->
-    {% block css %}
-    {% endblock css %}
-
-    <!--
-
-TemplateMo 581 Kind Heart Charity
-
-https://templatemo.com/tm-581-kind-heart-charity
-
--->
-
+	 <link rel="icon" type="image/png"  sizes=180x200" href="{%  static 'images/whitelogo.png' %}">
+    <title> Dedicated Technophiles </title>
+	<!-- Windows 8 Tiles -->
+	<meta name="msapplication-TileColor" content="#FFFFFF"/>
+	<!-- ****** faviconit.com favicons ****** -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/picto-foundry-emotions.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/picto-foundry-household.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/picto-foundry-shopping-finance.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/picto-foundry-general.css' %}" />
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet"/>
+	{% block css %}
+	{% endblock css %}
 </head>
+	<body>
+		<div class="pushWrapper">
+		    <!-- Header (shown on mobile only) -->
+			 {% include 'snippets/header.html' %}
 
-<body id="section_1">
-    {% include 'snippets/header.html' %}
+                {% block content %}
+                {% endblock content %}
 
-    {% block content %}
-    {% endblock content %}
-
-    {% include 'snippets/footer.html' %}
+            {% include 'snippets/footer.html' %}
+		</div>
     <!-- JAVASCRIPT FILES -->
     {% block js %}
     {% endblock js %}
-</body>
-
+	</body>
 </html>

@@ -1,87 +1,59 @@
 
 {% load static %}
-<header class="site-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-12 d-flex flex-wrap">
-                    <p class="d-flex me-4 mb-0">
-                        <i class="bi-geo-alt me-2"></i>
-                        Khoa Công Nghệ Thông Tin, Trường Đại Học Khoa Học Tự Nhiên - VNUHCM
-                    </p>
+<header class="pageHeader" >
+				<!-- Menu Trigger -->
+				<button class="menu-trigger">
+					<span class="lines"></span>
+				</button>
 
-                    <p class="d-flex mb-0">
-                        <i class="bi-envelope me-2"></i>
-                        <a href="">
-                            dtechnophiles123@gmail.com
-                        </a>
-                    </p>
-                </div>
+				<!-- Logo -->
+			    <a class="headerLogo smoothScroll" href="/" >
+					<div style="position: relative;">
+			    	 	<img  src="{% static 'images/whiteLogo.png' %}" style="margin-left: 20px;"   width="37px;" height="40px;">
+						<span class="text" style=" position: absolute; top: 40%; left: 18%; "> echnophiles </span>
+					</div>
+				</a>
+			</header>
 
-                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                    <p class="d-flex me-4 mb-0">
-                        NMCNTT - Group 2: DT
-                    </p>
-                </div>
+		    <!-- Sidebar -->
+			<div class="sidebar">
 
-            </div>
-        </div>
-    </header>
+				<nav class="mainMenu">
+					<ul class="menu">
 
-    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="{% static 'images/logo.png' %}" style="border-radius: 20px;" class="logo img-fluid"  alt="Kind Heart Charity">
-                <span>
-                    DT - DEDICATED TECHNOPHILES
-                    <small>DT học IT, Không Chỉ Để Đi Thi</small>
-                </span>
-            </a>
+						<li>
+							<a class="smoothScroll" href="/" title="Home"><i class="step icon-bulleted-list size-24"></i><span class="text">Home</span></a>
+						</li>
+						<li>
+							<a class="smoothScroll" href="/project" title="Services"><i class="step icon-document-heart size-24"></i><span class="text">Đồ Án</span></a>
+						</li>
+						<li>
+							<a class="smoothScroll" href="/contract" title="Testimonial"><i class="step icon-document-blank size-24"></i><span class="text">Hợp Đồng</span></a>
+						</li>
+						<li>
+							<a class="smoothScroll" href="/report" title="Pricing"><i class="step icon-documents size-24"></i><span class="text">Biên Bản Họp</span></a>
+						</li>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+					</ul>
+				</nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Giới Thiệu</a>
-                    </li>
+				<nav class="backToTop">
+					<ul class="backToTop-menu">
+						<li><a class="smoothScroll" href="" ><i class="step icon-phone size-24"></i><span class="text">Contact</span></a></li>
+					</ul>
+				</nav>
+			</div>
 
-                     <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
-                            id="navbarLightDropdownMenuLink1" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Đồ Án</a>
+			<!-- Share Menu -->
+			<nav class="shareMenu">
+				<a href="#" class="share-menu-trigger"><i class="fa fa-share-alt"></i></a>
 
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/project1">Đồ Án 1</a></li>
+				<div class="tweet-share">
 
-                            <li><a class="dropdown-item" href="/project2">Đồ Án 2</a></li>
-                        </ul>
-                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
-                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Tài Liệu</a>
+					<!-- Facebook - ADD HERE -->
 
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/contract">Hợp Đồng</a></li>
-
-                            <li><a class="dropdown-item" href="/plan">Project Plan</a></li>
-
-                            <li><a class="dropdown-item" href="/report">Biên Bản</a></li>
-
-                            <li><a class="dropdown-item" href="/worksheet">Bản Phân Công</a></li>
-
-                            <li><a  class="dropdown-item" href="/diary" target="_blank">Nhật Ký</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li class="nav-item ms-3">
-                        <a class="nav-link click-scroll custom-btn custom-border-btn btn" href="#section_6">Liên Hệ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+					<!-- Twitter - ADD HERE -->
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="TaphaNgum">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>
+			</nav>

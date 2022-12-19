@@ -1,284 +1,582 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
 {% block css %}
- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+<style>
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 10px;
+  max-height: 400px;
+  max-width: 1280px;
+  min-height: 300px;
+  min-width: 1000px;
+  display: flex;
+  flex-direction: center;
+align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+ align-items: center;
+}
+.container1 {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 20px;
+  max-height: 500px;
+  max-width: 1280px;
+  min-height: 300px;
+  min-width: 630px;
+  display: flex;
+  flex-direction: center;
+align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+ align-items: center;
+}
+.border {
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+.border:hover {
+  border: 1px solid #fff;
+}
+.card {
+  height: 379px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card0 {
+  background: url("{% static 'images/huyen.jpg' %}") center center no-repeat;
+  background-size: 300px;
+}
+.card0:hover {
+  background: url("{% static 'images/huyen.jpg' %}") left center no-repeat;
+  background-size: 600px;
+}
+.card0:hover h2 {
+  opacity: 1;
+}
+.card0:hover h4 {
+  opacity: 1;
+}
+.card0:hover .fa {
+  opacity: 1;
+}
+.card1 {
+  background: url("{% static 'images/nhi.jpg' %}") center center no-repeat;
+  background-size: 300px;
+}
+.card1:hover {
+  background: url("{% static 'images/nhi.jpg' %}") left center no-repeat;
+  background-size: 600px;
+}
+.card1:hover h2 {
+  opacity: 1;
+}
+.card1:hover h4 {
+  opacity: 1;
+}
+.card1:hover .fa {
+  opacity: 1;
+}
+.card2 {
+  background: url("{% static 'images/minh.jpg' %}") center center no-repeat;
+  background-size: 300px;
+}
+.card2:hover {
+  background: url("{% static 'images/minh.jpg' %}") left center no-repeat;
+  background-size: 600px;
+}
+.card2:hover h2 {
+  opacity: 1;
+}
+.card2:hover h4 {
+  opacity: 1;
+}
+.card2:hover .fa {
+  opacity: 1;
+}
+.card3 {
+  background: url("{% static 'images/loc.jpg' %}") center center no-repeat;
+  background-size: 300px;
+}
+.card3:hover {
+  background: url("{% static 'images/loc.jpg' %}") left center no-repeat;
+  background-size: 600px;
+}
+.card3:hover h2 {
+  opacity: 1;
+}
+.card3:hover h4 {
+  opacity: 1;
+}
+.card3:hover .fa {
+  opacity: 1;
+}
+.card4 {
+  background: url("{% static 'images/khoa.jpg' %}") center center no-repeat;
+  background-size: 300px;
+}
+.card4:hover {
+  background: url("{% static 'images/khoa.jpg' %}") left center no-repeat;
+  background-size: 600px;
+}
+.card4:hover h2 {
+  opacity: 1;
+}
+.card4:hover h4 {
+  opacity: 1;
+}
 
-    <link href="{% static 'css/templatemo-kind-heart-charity.css' %}" rel="stylesheet">
+.card4:hover .fa {
+  opacity: 1;
+}
+h2.cardfont {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+h4.textfont {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fa {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+</style>
 {% endblock css %}
-
 {% block content %}
 <main>
-    <section class="hero-section hero-section-full-height">
-        <div class="container-fluid">
-            <div class="row">
+<section class="section-intro" id="section-intro" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+    <div class="content" style="align-items: center; position:absolute; ">
+    <div class="container-template" >
+        <img  src="{% static 'images/whiteLogo.png' %}" style="margin-left: auto; margin-right: auto; display: block;" width="80px;" height="90px;">
 
-                <div class="col-lg-12 col-12 p-0">
-                    <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{% static 'images/myteam.jpg' %}"
-                                    class="carousel-image img-fluid" alt="...">
+        <h1>
+            <span class="seconday">#HCMUS - 22CLC03</span>
+            <span>DT - DEDICATED TECHNOPHILES</span>
+        </h1>
+    </div>
+</div>
+</section>
 
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1>DT</h1>
-
-                                    <p>Dedicated Technophiles</p>
+		        <section class="timeline-part" id="timeline-part">
+                         <div class="content">
+                            <div class="container-template">
+                                <div class="headergroup">
+                                    <h2 class="in-point">
+                                        <span>DT TEAM</span>
+                                    </h2>
                                 </div>
-                            </div>
-
-
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Thành Viên Nhóm DT - Dedicated Technophiles</h2>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/nhi.jpg' %}" class="featured-block-image img-fluid" alt="">
-                            <p class="featured-block-text">Cao Uyển Nhi <br> <strong>Leader</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/loc.jpg' %}" class="featured-block-image img-fluid" alt="">
-                            <p class="featured-block-text"> Nguyễn Tấn Lộc <br> <strong>Game Maker & Event</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/khoa.jpg' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text">Đặng Trần Anh Khoa <br> <strong>Game Maker & Report Creator</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/minh.jpg' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text"> Nguyễn Tuấn Minh <br> <strong>Designer & Infomation Manager</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="/" class="d-block">
-                            <img src="{% static 'images/huyen.jpg' %}" class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text">Thái Thị Kim Huyền <br><strong>Secretary & Designer</strong></p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding section-bg" id="section_2">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{% static 'images/theme1.gif' %}"
-                        class="custom-text-box-image img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box">
-                        <h2 class="mb-2">Đồ Án</h2>
-
-                        <h5 class="mb-3">SLEEPY GURL <small>(dựa trên <a href="https://flappybird.io/" target="_blank">Flappy Bird</a>)</small></h5>
-
-                        <p class="mb-0">Anna (Nhân vật chính) là một cô gái ham ngủ hơn ham học. Đáng buồn thay, thời gian không chờ đợi một ai và bây giờ cô ấy sẽ phải gánh lấy hậu quả. Bạn hãy giúp Anna! Hãy điều khiển một cách khéo léo, để Anna có thể hoàn thành những deadline mà lẽ ra cô bạn nên hoàn thành sớm hơn. Tuy nhiên, vì Anna vẫn chưa hết buồn ngủ, đừng để cô ấy ngủ gục giữa chừng nhé!
-</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box mb-lg-0">
-                                <h5 class="mb-3">Tiến Trình</h5>
-
-                                <p></p>
-
-                                <ul class="custom-list mt-2">
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Hoàn Thiện Website Giới Thiệu Nhóm, Giới Thiệu Game
-                                    </li>
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Hoàn Thiện Version Product Game
-                                    </li>
-
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Tổng Kết Đồ Án
-                                    </li>
-                                </ul>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
-                                <div class="counter-thumb">
-                                    <div class="d-flex">
-                                        <span class="counter-number" data-from="1" data-to="100"
-                                            data-speed="1000"></span>
-                                        <span class="counter-number-text">%</span>
-                                    </div>
-
-                                    <span class="counter-text">Hoàn Thành</span>
+                            <div class="container" style="padding-top: 50px;">
+                              <div class="card card0">
+                                <div class="border">
+                                  <h2 class="cardfont">Thái Thị Kim Huyền</h2>
+                                    <h4 class="textfont">Thư Ký</h4>
+                                  <div class="icons">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </div>
                                 </div>
-                                <br>
-                                  <ul class="custom-list mt-2">
-                                      <li class="custom-list-item d-flex">
-                                        <i class="bi-info-circle custom-text-box-icon me-2"></i>
-                                          <a href="/project" class="site-footer-link1"> <b>More info</b> </a>
-                                    </li>
-                                  </ul>
+                              </div>
+                              <div class="card card1">
+                                <div class="border">
+                                  <h2  class="cardfont">Cao Uyển Nhi</h2>
+                                    <h4 class="textfont">Scrum Master</h4>
+                                  <div class="icons">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card card2">
+                                <div class="border">
+                                  <h2  class="cardfont">Nguyễn Tuấn Minh</h2>
+										<h4 class="textfont">Sáng Tạo Nội Dung</h4>
+                                  <div class="icons">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
 
                             </div>
-                        </div>
-                    </div>
-                </div>
+                            <div class="container1">
+                              <div class="card card3">
+                                <div class="border">
+                                  <h2  class="cardfont">Nguyễn Tấn Lộc</h2>
+                                    <h4 class="textfont">Sáng Tạo Nội Dung</h4>
+                                  <div class="icons">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card card4">
+                                <div class="border">
+                                  <h2  class="cardfont">Đặng Trần Anh Khoa</h2>
+                                    <h4 class="textfont">Biên Soạn</h4>
+                                  <div class="icons">
+                                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
 
+                </section>
+<section class="timeline-part">
+
+	<div class="content">
+		<div class="container-template">
+
+			<div class="headergroup">
+			    <h2 class="in-point">
+			        <span class="seconday">Who Are</span>
+			        <span>DT Team?</span>
+			    </h2>
+		    </div>
+
+		    <div class="intro content-template">
+                <img src="{% static 'images/mem.png' %}" width="100%;" height="100%">
             </div>
-        </div>
-    </section>
+
+		    <ul class="timeline">
+                    <li class="year">09.22</li>
+				    <li class="upper-line">
+				    	<span class="title" style = "font-family:Candara,arial,helvetica;">Thành lập nhóm</span>
+				    	<span class="timeline-content paragraph-text" style = "font-family:Candara,arial,helvetica;">Nhóm được thành lập với 5 thành viên của lớp 22CLC03, với
+						<strong>Leader là Cao Uyển Nhi</strong> và hỗ trợ bởi <strong>Ths. Tạ Viết Phương</strong>
+						</span>
+				    </li>
 
 
+					<li class="year">25.11</li>
+				    <li class="upper-line">
+				    	<span class="title" style = "font-family:Candara,arial,helvetica;">Ra mắt đồ án 1 - Remake Game <a href="https://sleepygurl.pythonanywhere.com/">Sleepy Gurl</a></span>
+				    	<span class="paragraph-text timeline-content" style = "font-family:Candara,arial,helvetica;">
+                        Một sản phẩm game của team DT , Sleepy Gurl bản cải tiến của Flappy Bird sắp được ra mắt trên chợ với thiết kế giao diện mới lạ Sleepy gurl là tựa game hành động chơi trên máy tính.  Bạn sẽ được trải nghiệm cảm giác chạy deadline không hề nhàm chán với các chướng ngại vật và vật phẩm cũng như các tính năng vô cùng độc đáo.
+                        </span>
+				    </li>
 
-    <section class="testimonial-section section-padding section-bg">
-        <div class="container">
-            <div class="row">
+				    <li class="year">19.12</li>
+				    <li class="upper-line">
+				    	<span class="title" style = "font-family:Candara,arial,helvetica;">Ra mắt đồ án 2 - Video demo hệ thống tìm kiếm thông tin sử dụng OCR
+				    	</span>
+				    	<span class="timeline-content" style = "font-family:Candara,arial,helvetica;">
+				    		We have our business in 12 countries all over the world. We want to spread it throughout the world. You can contribute us joining the winning the team
+						</span>
+				    </li>
+                <li class="year">19.12</li>
+				    <li class="upper-line">
+				    	<span class="title" style = "font-family:Candara,arial,helvetica;">Kết thúc học kì
+				    	</span>
+				    	<span class="timeline-content" style = "font-family:Candara,arial,helvetica;">
+				    		We have our business in 12 countries all over the world. We want to spread it throughout the world. You can contribute us joining the winning the team
+						</span>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
 
-                <div class="col-lg-8 col-12 mx-auto">
-                    <h2 class="mb-lg-3">Quotes of Members</h2>
+		</section>
+        <section class="stastistical-part" id="stastistical-part">
+			<!-- section-seperator -->
+			<div class="section-seperator">
+				<div class="container-template">
+					<h2>
+						<span class="seconday">Our</span>
+						Slogan </h2>
+				</div>
+			</div>
+		</section>
+	<section class="featured-part" >
+			<div class="content">
+				<div class="container-template">
 
-                    <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+					<div class="headergroup">
+						<h2>
+					        <span  style = "font-family:Candara,arial,helvetica;">Sản Phẩm</span>
+					    </h2>
+				    </div>
+				    <br>
 
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="carousel-caption">
-                                    <h4 class="carousel-title">The insight and experience of successful leaders and entrepreneurs are valuable sources of inspiration and motivation. </h4>
+				    <div class="intro content-template">
+				        <p style = "font-family:Candara,arial,helvetica;">Các sản phẩm là đồ án của môn Nhập Môn Công Nghệ Thông Tin và được thực hiện bởi <strong>Team DT</strong></p>
+				    </div>
+				    <br>
 
-                                    <small class="carousel-name"><span class="carousel-name-title">Cao Nhi</span>,
-                                        Leader</small>
-                                </div>
-                            </div>
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 
-                            <div class="carousel-item">
-                                <div class="carousel-caption">
-                                    <h4 class="carousel-title">Giá trị của một ý tưởng nằm ở cách sử dụng ý tưởng đó.</h4>
+				  </ol>
 
-                                    <small class="carousel-name"><span class="carousel-name-title">Nguyễn Tấn Lộc</span>,
-                                        Game Maker</small>
-                                </div>
-                            </div>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+				    <div class="item active" style=" height: 50%;">
+				      <img src="{% static 'images/comingsoon.gif' %}" alt="..." style="align: center;" >
 
-                            <div class="carousel-item">
-                                <div class="carousel-caption">
-                                    <h4 class="carousel-title">Thỉnh thoảng con người cần một lần đẩy, một áp lực mà có thể đưa tinh thần của một người đến tuyệt vọng mới cho họ thấy được tiềm năng và ý chí của mình; thấy được rằng ý chí chính là nguồn phép màu trong sự sống đầy tàn nhẫn.</h4>
+				    </div>
+				    <div class="item" style=" height: 50%;">
+				      <img src="{% static 'images/comingsoon2.gif' %}" alt="..." style="object-fit: contain;">
+				    </div>
 
-                                    <small class="carousel-name"><span class="carousel-name-title">Đặng Trần Anh Khoa</span>,
-                                        Game Maker</small>
-                                </div>
-                            </div>
+				  </div>
 
-                            <div class="carousel-item">
-                                <div class="carousel-caption">
-                                    <h4 class="carousel-title">The way to get started is to quit talking and begin doing</h4>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 
-                                    <small class="carousel-name"><span class="carousel-name-title">Nguyễn Tuấn Minh</span>,
-                                        Designer</small>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-caption">
-                                    <h4 class="carousel-title">Thành công không phải vượt qua người khác mà là vượt qua bạn của ngày hôm qua</h4>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 
-                                    <small class="carousel-name"><span class="carousel-name-title">Thái Thị Kim Huyền</span>,
-                                        Designer</small>
-                                </div>
-                            </div>
+				  </a>
+				</div>
 
-                            <ol class="carousel-indicators">
-                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                    <img src="{% static 'images/nhi.jpg' %}"
-                                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                </li>
+			</div>
+		</div>
 
-                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                    <img src="{% static 'images/loc.jpg' %}"
-                                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                </li>
+		</section>
+	<section class="events-part" id="events-part">
 
-                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                    <img src="{% static 'images/khoa.jpg' %}"
-                                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                </li>
 
-                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                    <img src="{% static 'images/minh.jpg' %}"
-                                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                </li>
-                                 <li data-bs-target="#testimonial-carousel" data-bs-slide-to="4" class="">
-                                    <img src="{% static 'images/huyen.jpg' %}"
-                                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                </li>
-                            </ol>
+			<!-- section-seperator -->
+			<div class="section-seperator">
+				<div class="container-template">
+					<h2>
+				        <span class="seconday">Upcoming</span>
+				        Events
+				    </h2>
+				</div>
+			</div>
 
-                        </div>
-                    </div>
-                </div>
+			<!-- Content -->
+			<div class="content">
+				<div class="container-template">
+					<!-- Events List -->
+			 		<ul class="events-list">
+		 				<li class="event-titles">
+		 					<div class="event-title">Event</div>
+		 					<div class="event-title">Date</div>
+		 					<div class="event-title">Location</div>
+		 				</li>
 
-            </div>
-        </div>
-    </section>
+		 				<li>
+		 					<div class="event-text" style = "font-family:Candara,arial,helvetica;">
+								<div class="event-details content-template">
+									<h4 class="event-title" style = "font-family:Candara,arial,helvetica;">Báo Cáo Đồ Án 2</h4>
+
+									<div class="event-date" >
+										19/12/2022							</div>
+
+									<div class="event-location">
+										Trường Đại Học Khoa Học Tự Nhiên  	</div>
+								</div>
+
+								<div class="event-description content-template">Seminar Đồ Án 2 - Video Demo Hệ thống tìm kiếm thông tin bằng hình ảnh sử dụng OCR</div>
+							</div>
+
+							<div class="event-image">
+								<img src="{% static 'images/comingsoon2.gif' %}" style="object-fit: contain; border-radius: 20px;"  alt="your text" />
+							</div>
+		 				</li>
+
+
+		 				<li>
+		 					<div class="event-text">
+								<div class="event-details content-template" >
+									<h4 class="event-title"  style = "font-family:Candara,arial,helvetica;">Họp Nhóm Tuần 9</h4>
+
+									<div class="event-date" style = "font-family:Candara,arial,helvetica;">
+										14/12/2022
+									</div>
+
+									<div class="event-location"  style = "font-family:Candara,arial,helvetica;">
+										Thư Viện Tầng 10, Trường Đại Học Khoa Học Tự Nhiên
+									</div>
+								</div>
+
+								<div class="event-description content-template"  style = "font-family:Candara,arial,helvetica;">
+									Nhận xét tiến độ kịch bản và video của nhóm. <br></br>
+									Chỉnh sửa, hoàn thiện sản phẩm (slide và video) hơn.
+
+								</div>
+							</div>
+
+							<div class="event-image">
+								<img src="{% static 'images/nhom1.jpg' %}" style="object-fit: contain; border-radius: 20px;"  alt="your text" />					</div>
+		 				</li>
+
+
+		 				<li>
+		 					<div class="event-text">
+								<div class="event-details content-template">
+									<h4 class="event-title" style = "font-family:Candara,arial,helvetica;">Báo cáo tiến độ đồ án 2 - lần 2</h4>
+
+									<div class="event-date" style = "font-family:Candara,arial,helvetica;">
+										12/12/2013							</div>
+
+									<div class="event-location" style = "font-family:Candara,arial,helvetica;">
+										Phòng i52, Trường Đại Học Khoa Học Tư
+									</div>
+								</div>
+
+								<div class="event-description content-template" style = "font-family:Candara,arial,helvetica;">Lọc thông tin cần thiết nhất từ hệ thống thông tin đã tìm kiếm <br>
+								Dựng và edit video <br>
+								Chỉnh sửa và hoàn thiện cho ra bản cuối cùng <br>
+								Upload đồ án lên website <br>
+								</div>
+							</div>
+
+							<div class="event-image">
+								<img src="{% static 'images/hcmus.jpg' %}" style="object-fit: contain; border-radius: 20px;"  alt="your text here" />					</div>
+		 				</li>
+
+
+		 				<li>
+		 					<div class="event-text">
+								<div class="event-details content-template">
+									<h4 class="event-title" style = "font-family:Candara,arial,helvetica;">Họp nhóm Tuần 8</h4>
+
+									<div class="event-date" style = "font-family:Candara,arial,helvetica;">
+										7/17/2022
+									</div>
+
+									<div class="event-location" style = "font-family:Candara,arial,helvetica;">
+											 Đồng Cafe, 286/1A, Đ. Trần Hưng Đạo, Phường Nguyễn Cư Trinh, Quận 1
+									</div>
+								</div>
+
+								<div class="event-description content-template" style = "font-family:Candara,arial,helvetica;">Duyệt lại tất cả các nội dung đã được yêu cầu chỉnh sửa trong cuộc họp lần 6. <br>
+											Lên kịch bản cho video. </div>
+							</div>
+
+							<div class="event-image">
+								<img src="{% static 'images/pic2.jpeg' %}" style="object-fit: contain; border-radius: 20px;"  alt="your text" />
+							</div>
+		 				</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+			<!-- FOUNDERS & TEAM SECTION-->
+
+		<section class="section-team" id="section-team">
+
+			<!-- Content -->
+			<div class="content">
+				<div class="container-template" >
+
+					<div class="headergroup">
+						<h2>
+
+					        <span style = "font-family:Candara,arial,helvetica;">Giáo Viên Hướng Dẫn</span>
+					    </h2>
+				    </div>
+
+
+					<!-- Team Members List -->
+			 		<ul class="team-members">
+
+		 				<li>
+
+		 					<h3 class="team-member-title">
+		 						<span class="seconday" style = "font-family:Candara,arial,helvetica;">Ths. Tạ Việt Phương</span>
+		 					</h3>
+
+		 					<div class="team-member-text content-template">
+		 						<p></p>
+		 					</div>
+		 				</li>
+						<li>
+
+		 					<h3 class="team-member-title">
+		 						<span class="seconday" style = "font-family:Candara,arial,helvetica;">Ths. Trương Tấn Khoa</span>
+		 					</h3>
+
+		 					<div class="team-member-text content-template">
+		 						<p></p>
+		 					</div>
+		 				</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 </main>
 {% endblock content %}
     {% block js %}
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.sticky.js' %}"></script>
-    <script src="{% static 'js/click-scroll.js' %}"></script>
-    <script src="{% static 'js/counter.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
+   <script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery-migrate.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.form.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.mobile.custom.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/modernizr.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/response.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/swiper.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/waypoints.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/jquery.stellar.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/module.js" %}'></script>
+		<script type='text/javascript' src='{% static "js/bootstrap.min.js" %}'></script>
+		<script src="{% static 'js/wow.min.js"></script>
+
+		<script>
+		new WOW().init();
+		</script>
     {% endblock js %}
